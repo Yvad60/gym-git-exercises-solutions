@@ -184,3 +184,120 @@ yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (dev)
 $ git reset --hard
 HEAD is now at d2ef659 Add home and about pages
 ```
+
+## Bundle 2
+
+### exercise 1
+
+### exercise 2
+
+```bash
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/bundle-2)    
+$ git checkout main
+Switched to branch 'main'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 622 bytes | 77.00 KiB/s, done.
+From https://github.com/Yvad60/git-bundle1-exercise1
+ * branch            main       -> FETCH_HEAD
+   801b2bb..cea7285  main       -> origin/main
+Updating 801b2bb..cea7285
+Fast-forward
+ home.html     | 12 ++++++++++++
+ index.html    | 12 ++++++++++++
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+Switched to a new branch 'ft/service-redesign'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+$ git add .
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+$ git commit -m "Add changes to the service page"
+[ft/service-redesign 5f5b07a] Add changes to the service page
+ 1 file changed, 1 insertion(+)
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+$ git push origin ft/service-redesign 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Yvad60/git-exercises-sandbox/pull/new/ft/service-redesign
+remote:
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git add .
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git commit -m "Add changes to the service page from main"
+[main e6b97ad] Add changes to the service page from main
+ 1 file changed, 2 insertions(+)
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 408 bytes | 408.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+   cea7285..e6b97ad  main -> main
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+$ git diff
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign|MERGING)
+$ git add .
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign|MERGING)
+$ git commit
+[ft/service-redesign 5b409c1] Merge branch 'main' into ft/service-redesign
+
+$ git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 371 bytes | 371.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+   5f5b07a..5b409c1  ft/service-redesign -> ft/service-redesign
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+```
