@@ -1,4 +1,5 @@
 # Git execises solutions
+
 ## Bundle 1
 
 ### Exercise 1
@@ -68,6 +69,7 @@ $ git branch -d test
 Deleted branch test (was 801b2bb).
 
 ```
+
 ### Exercise 2
 
 ```bash
@@ -160,7 +162,7 @@ Compressing objects: 100% (4/4), done.
 Writing objects: 100% (4/4), 576 bytes | 576.00 KiB/s, done.
 Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), done.
-remote: 
+remote:
 remote: Create a pull request for 'dev' on GitHub by visiting:
 remote:      https://github.com/Yvad60/git-bundle1-exercise1/pull/new/dev
 remote:
@@ -192,7 +194,7 @@ HEAD is now at d2ef659 Add home and about pages
 ### exercise 2
 
 ```bash
-yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/bundle-2)    
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/bundle-2)
 $ git checkout main
 Switched to branch 'main'
 
@@ -225,7 +227,7 @@ $ git commit -m "Add changes to the service page"
  1 file changed, 1 insertion(+)
 
 yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
-$ git push origin ft/service-redesign 
+$ git push origin ft/service-redesign
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
@@ -235,7 +237,7 @@ Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 remote: This repository moved. Please use the new location:
 remote:   https://github.com/Yvad60/git-exercises-sandbox.git
-remote: 
+remote:
 remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
 remote:      https://github.com/Yvad60/git-exercises-sandbox/pull/new/ft/service-redesign
 remote:
@@ -300,4 +302,179 @@ To https://github.com/Yvad60/git-bundle1-exercise1.git
    5f5b07a..5b409c1  ft/service-redesign -> ft/service-redesign
 
 yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/service-redesign)
+```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout ft/contact-page
+error: pathspec 'ft/contact-page' did not match any file(s) known to git
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/team-page)
+$ git log
+commit 1ebfbd1f300957aba445c478ef977f31685fb9bd (HEAD -> ft/team-page, origin/ft/team-page)
+Author: ivad <yvesyvad@gmail.com>
+Date:   Thu Nov 3 19:29:46 2022 +0200
+
+    Create and add changes to team page
+
+commit e6b97ad873544c4bb83093654c9aaf122da8e47e (origin/main, main, ft/contact-page)
+Author: ivad <yvesyvad@gmail.com>
+Date:   Thu Nov 3 18:50:53 2022 +0200
+
+    Add changes to the service page from main
+
+commit cea7285dbbf03a434744cc5ad25ab4b0a987674c
+Merge: 801b2bb 7d02efe
+Author: Chrissie <chrissiemhrk@gmail.com>
+Date:   Thu Nov 3 11:04:53 2022 +0200
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/team-page)
+$ git cherry-pick yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/team-page)   
+$ git checkout main
+Switched to branch 'main'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout ft/contact-page
+error: pathspec 'ft/contact-page' did not match any file(s) known to git
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/team-page)   
+$ git log
+commit 1ebfbd1f300957aba445c478ef977f31685fb9bd (HEAD -> ft/team-page, origin/ft/team-page)
+Date:   Thu Nov 3 11:04:53 2022 +0200^Cm>87674c (origin/main, main, ft/contact-page)
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/team-page)
+$ git cherry-pick 1ebfbd1f300957aba445c478ef977f31685fb9bd
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/team-page
+You are currently cherry-picking commit 1ebfbd1.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/team-page|CHERRY-PICKING)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+warning: cancelling a cherry picking in progress
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git checkout ft/contact-page
+Already on 'ft/contact-page'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git cherry-pick 1ebfbd1f300957aba445c478ef977f31685fb9bd
+[ft/contact-page 81df6ff] Create and add changes to team page
+ Date: Thu Nov 3 19:29:46 2022 +0200
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git add .
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git commit -m "added new changes from team branch"
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git commit -m "added new changes from team branch"
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git push origin ft/contact-page 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 511 bytes | 102.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Yvad60/git-exercises-sandbox/pull/new/ft/contact-page
+remote:
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/faq-page)
+$ git add .
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/faq-page)
+$ git commit
+[ft/faq-page bc7a45b] Add faq page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 faq.html
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/faq-page)
+$ git push origin ft/faq-page 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 454 bytes | 22.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Yvad60/git-exercises-sandbox/pull/new/ft/faq-page
+remote:
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/faq-page)
+$ git revert 1ebfbd1f300957aba445c478ef977f31685fb9bd
+[ft/faq-page c9c8cbe] Revert "Create and add changes to team page"
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 team.html
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/faq-page)
+$ git push origin ft/faq-page 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 279 bytes | 139.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+   bc7a45b..c9c8cbe  ft/faq-page -> ft/faq-page
 ```
