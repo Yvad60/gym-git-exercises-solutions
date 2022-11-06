@@ -610,3 +610,45 @@ To https://github.com/Yvad60/git-bundle1-exercise1.git
  * [new branch]      ft/squashing -> ft/squashing
 
 ```
+
+## Bundle 5
+
+### Exercise 2
+```bash
+PS C:\Users\yvesy\OneDrive\Desktop\New folder> gh repo clone Yvad60/git-cafe-exercise
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (107/107), done.
+remote: Compressing objects: 100% (101/101), done.
+remote: Total 107 (delta 5), reused 104 (delta 4), pack-reused 0Receiving objects:  96% (103/107), 1.91 MiB | 60.00 KiB/Receiving objects: 100% (107/107), 1.95 MiB | 65.00 KiB/s, done.
+
+Resolving deltas: 100% (5/5), done.
+
+
+A new release of gh is available: 2.18.1 → 2.19.0
+https://github.com/cli/cli/releases/tag/v2.19.0
+
+PS C:\Users\yvesy\OneDrive\Desktop\New folder> cd .\git-cafe-exercise\
+PS C:\Users\yvesy\OneDrive\Desktop\New folder\git-cafe-exercise> code .
+PS C:\Users\yvesy\OneDrive\Desktop\New folder\git-cafe-exercise>
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/New folder/git-cafe-exercise (main)
+$ git add .
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/New folder/git-cafe-exercise (main)
+$ git commit 
+[main 75945d6] Change the heading
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/New folder/git-cafe-exercise (main)
+$ git push origin main 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Yvad60/git-cafe-exercise.git
+   d1d3f9c..75945d6  main -> main
+
+```
