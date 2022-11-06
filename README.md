@@ -533,3 +533,80 @@ To https://github.com/Yvad60/git-exercise-repo-2.git
  * [new branch]      main -> main
 
 ```
+
+### Exercise 2
+
+```bash
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git checkout main
+Switched to branch 'main'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout -b ft/squashing
+fatal: a branch named 'ft/squashing' already exists
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git checkout ft/squashing 
+Switched to branch 'ft/squashing'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git merge squash ft/footer
+merge: squash - not something we can merge
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git merge --squash ft/footer 
+Updating ac7cfe7..a147759
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git commi -m 'footer changes squashing'
+git: 'commi' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        column
+        config
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git commit -m 'footer changes squashing'
+[ft/squashing 228bdd3] footer changes squashing
+ 1 file changed, 5 insertions(+)
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git push origin ft/s
+ft/service-redesign   ft/squashing
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git push origin ft/s
+ft/service-redesign   ft/squashing
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/squashing)
+$ git push origin ft/squashing 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 414 bytes | 207.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Yvad60/git-exercises-sandbox/pull/new/ft/squashing
+remote:
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+```
