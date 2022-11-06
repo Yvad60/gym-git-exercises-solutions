@@ -478,3 +478,58 @@ remote:   https://github.com/Yvad60/git-exercises-sandbox.git
 To https://github.com/Yvad60/git-bundle1-exercise1.git
    bc7a45b..c9c8cbe  ft/faq-page -> ft/faq-page
 ```
+
+### Exercise 2
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git remote add git-copy https://github.com/Yvad60/git-exercise-repo-2.git
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git remote 
+git-copy
+origin
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git add .
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git commit -m "add a new home heading"
+[main ac7cfe7] add a new home heading
+ 1 file changed, 1 insertion(+)
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 172.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Yvad60/git-exercises-sandbox.git
+To https://github.com/Yvad60/git-bundle1-exercise1.git
+   5e68747..ac7cfe7  main -> main
+
+yvesy@geekbook MINGW64 ~/OneDrive/Desktop/sweeton-project (main)
+$ git push git-copy main
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (20/20), 2.47 KiB | 315.00 KiB/s, done.
+Total 20 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/Yvad60/git-exercise-repo-2.git
+ * [new branch]      main -> main
+
+```
